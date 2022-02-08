@@ -1,0 +1,36 @@
+name: Build and Deploy to GitHub Pages
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
+
+      - name: Unit tests
+        run: |
+          yarn test:unit
+
+      - name: E2E tests
+        run: |
+          yarn test:e2e --headless
+
+      - name: Build app
+        run: |
+          sed -i 's/.*publicPath.*/  publicPath: "\/simon-game-test-assignment\/",/g' ./vue.config.js
+          yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: dist

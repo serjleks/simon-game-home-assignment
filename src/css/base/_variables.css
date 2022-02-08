@@ -1,0 +1,17 @@
+:root {
+	--font-size: 14px;
+	--font-line-height: 20px;
+
+	--text-color: #D8D0D0;
+	--accent-color: #259483;
+	--bg-color: #0D101C;
+
+	--ui-button-default-color: #d8d0d0;
+	--ui-button-default-bg-color: #0D101C;
+	--ui-button-default-border-color: #080c1a;
+	--ui-button-default-hover-color: #0D101C;
+	--ui-button-default-hover-bg-color: #259483;
+	--ui-button-default-active-color: #1a93d0;
+
+	--ui-button-active-color: #d8d0d0;
+}
