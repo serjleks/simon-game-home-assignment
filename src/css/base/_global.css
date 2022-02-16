@@ -1,0 +1,24 @@
+body {
+	font-family: "Arial", sans-serif;
+	font-size: var(--font-size);
+	line-height: var(--font-line-height);
+
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+html,
+body,
+#app-mount {
+	min-height: 100vh;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: unset;
+}
+
+*::selection {
+	color: #ffffff;
+	background: var(--accent-color);
+}
