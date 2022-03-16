@@ -1,5 +1,9 @@
 # simon-game-test-assignment
 
+## Github-Pages
+
+**[Github-Pages](https://serjleks.github.io/simon-game-test-assignment)**
+
 ## Project setup
 ```
 yarn install
